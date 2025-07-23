@@ -1,4 +1,4 @@
-package org.lessons.test.generali;
+package org.lessons.java.oop.test.generali;
 
 import java.util.Random;
 import java.util.Scanner;
