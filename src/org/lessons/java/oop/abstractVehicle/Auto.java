@@ -1,71 +1,38 @@
 package org.lessons.java.oop.abstractVehicle;
 
-public class Auto {
+public class Auto extends AbstractVehicle {
     // ATTRIBUTI
-    private String brand;
-    private String model;
-    private int powerInHp;
-    private int remainingFuel;
+    private int numberOfWheels;
 
     // COSTRUTTORI
-    public Auto(String brand, String model, int powerInHp) {
-        this.brand = brand;
-        this.model = model;
-        this.powerInHp = powerInHp;
-        this.remainingFuel = 100;
+    public Auto(String brand, String model, int powerInHp, int numberOfWheels) {
+        super(brand, model, powerInHp);
+        this.numberOfWheels = numberOfWheels;
     }
 
-    public Auto(String brand, String model, int powerInHp, int remainingFuel) {
-        this.brand = brand;
-        this.model = model;
-        this.powerInHp = powerInHp;
-        this.remainingFuel = remainingFuel;
+    public Auto(String brand, String model, int powerInHp, int remainingFuel, int numberOfWheels) {
+        super(brand, model, powerInHp, remainingFuel);
+        this.numberOfWheels = numberOfWheels;
     }
 
     // GETTER E SETTER
-    public String getBrand() {
-        return this.brand;
+    public int getNumberOfWheels() {
+        return this.numberOfWheels;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return this.model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getPowerInHp() {
-        return this.powerInHp;
-    }
-
-    public void setPowerInHp(int powerInHp) {
-        this.powerInHp = powerInHp;
-    }
-
-    public int getRemainingFuel() {
-        return this.remainingFuel;
-    }
-
-    public void setRemainingFuel(int remainingFuel) {
-        this.remainingFuel = remainingFuel;
+    public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
     }
 
     // METODI AGGIUNTIVI
+    @Override
     public void start() {
         System.out.println("Car start");
     }
 
+    @Override
     public void stop() {
         System.out.println("Car stop");
-    }
-
-    public void addFuel(int fuelQuantity) {
-        this.remainingFuel += fuelQuantity;
     }
 
 }

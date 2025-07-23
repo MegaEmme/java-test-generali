@@ -1,71 +1,38 @@
 package org.lessons.java.oop.abstractVehicle;
 
-public class Plane {
+public class Plane extends AbstractVehicle {
     // ATTRIBUTI
-    private String brand;
-    private String model;
-    private int powerInHp;
-    private int remainingFuel;
+    private int numberOfEngines;
 
     // COSTRUTTORI
-    public Plane(String brand, String model, int powerInHp) {
-        this.brand = brand;
-        this.model = model;
-        this.powerInHp = powerInHp;
-        this.remainingFuel = 2000;
+    public Plane(String brand, String model, int powerInHp, int numberOfEngines) {
+        super(brand, model, powerInHp);
+        this.numberOfEngines = numberOfEngines;
     }
 
-    public Plane(String brand, String model, int powerInHp, int remainingFuel) {
-        this.brand = brand;
-        this.model = model;
-        this.powerInHp = powerInHp;
-        this.remainingFuel = remainingFuel;
+    public Plane(String brand, String model, int powerInHp, int remainingFuel, int numberOfEngines) {
+        super(brand, model, powerInHp, remainingFuel);
+        this.numberOfEngines = numberOfEngines;
     }
 
     // GETTER E SETTER
-    public String getBrand() {
-        return this.brand;
+    public int getNumberOfEngines() {
+        return this.numberOfEngines;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getModel() {
-        return this.model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getPowerInHp() {
-        return this.powerInHp;
-    }
-
-    public void setPowerInHp(int powerInHp) {
-        this.powerInHp = powerInHp;
-    }
-
-    public int getRemainingFuel() {
-        return this.remainingFuel;
-    }
-
-    public void setRemainingFuel(int remainingFuel) {
-        this.remainingFuel = remainingFuel;
+    public void setNumberOfEngines(int numberOfEngines) {
+        this.numberOfEngines = numberOfEngines;
     }
 
     // METODI AGGIUNTIVI
+    @Override
     public void start() {
         System.out.println("Plane start");
     }
 
+    @Override
     public void stop() {
         System.out.println("Plane stop");
-    }
-
-    public void addFuel(int fuelQuantity) {
-        this.remainingFuel += fuelQuantity;
     }
 
     public void fly() {
