@@ -1,6 +1,8 @@
 package org.lessons.java.oop.abstractVehicle;
 
-public class Ship extends AbstractVehicle {
+import org.lessons.java.oop.abstractVehicle.interfaces.Truckable;
+
+public class Ship extends AbstractVehicle implements Truckable {
     private float length;
 
     // COSTRUTTORI
@@ -42,6 +44,37 @@ public class Ship extends AbstractVehicle {
 
     public void dock() {
         System.out.println("Ship docking");
+    }
+
+    // Metodi importati con Quick fix su Ship (" Ctrl + , " --> implement methods)
+    @Override
+    public float getShippableWeight() {
+        return 6000f;
+    }
+
+    @Override
+    public float getShippableLength() {
+        return 8f;
+    }
+
+    @Override
+    public float getShippableWidth() {
+        return 4.5f;
+    }
+
+    @Override
+    public float getShippableHeight() {
+        return 4f;
+    }
+
+    @Override
+    public boolean isFragile() {
+        return true;
+    }
+
+    @Override
+    public boolean isWheeled() {
+        return false;
     }
 
 }
