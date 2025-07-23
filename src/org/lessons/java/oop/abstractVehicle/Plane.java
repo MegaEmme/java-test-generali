@@ -25,11 +25,13 @@ public class Plane extends AbstractVehicle {
     }
 
     // METODI AGGIUNTIVI
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void start() {
         System.out.println("Plane start");
     }
 
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void stop() {
         System.out.println("Plane stop");

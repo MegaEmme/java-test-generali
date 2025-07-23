@@ -25,11 +25,13 @@ public class Auto extends AbstractVehicle {
     }
 
     // METODI AGGIUNTIVI
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void start() {
         System.out.println("Car start");
     }
 
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void stop() {
         System.out.println("Car stop");

@@ -24,11 +24,13 @@ public class Ship extends AbstractVehicle {
     }
 
     // METODI AGGIUNTIVI
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void start() {
         System.out.println("Ship start");
     }
 
+    // Override del METODO ASTRATTO creato in AbstractVehicle
     @Override
     public void stop() {
         System.out.println("Ship stop");
