@@ -2,6 +2,8 @@ package org.lessons.java.oop.abstractVehicle;
 
 public abstract class AbstractVehicle {
     // ATTRIBUTI
+    // Qua mettiamo protected cosi viene letto dal package (in cui sono presenti
+    // le classi Auto, Ship e Plane) e non oltre
     protected String brand;
     protected String model;
     protected int powerInHp;
