@@ -4,7 +4,7 @@ import org.lessons.java.oop.abstractVehicle.interfaces.Truckable;
 
 public class Main {
     public static void main(String[] args) {
-
+        // POLIMORFISMO, CLASSI ASTRATTE E INTERFACCE
         // Creo un Auto
         Auto autoAuto = new Auto(null, null, 0, 0);
         // che ha i metodi di Auto:
