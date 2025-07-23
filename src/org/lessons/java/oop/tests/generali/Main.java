@@ -1,4 +1,4 @@
-package org.lessons.java.oop.test.generali;
+package org.lessons.java.oop.tests.generali;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +11,8 @@ public class Main {
         // cambio il modello delle auto
         System.out.println(cinquecento.getModel());
         // qui richiamo setModel senza parametri --> ()
+        // che mi costruisce un auto con i parametri del tipo: senza modello senza
+        // colore etc..
         cinquecento.setModel();
         System.out.println(cinquecento.getModel());
         //
