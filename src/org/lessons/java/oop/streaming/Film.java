@@ -31,4 +31,19 @@ public class Film extends Contenuto {
     }
 
     // METODI AGGIUNTIVI
+    // POLIMORFISMO - cambio il messaggio del toString in base alla classe (Serie,
+    // Film, Documentario)
+    @Override
+    public String toString() {
+        return String.format("Film intitolato ''%s'', con %d attori e %d minuti di durata", this.titolo,
+                this.cast.length,
+                this.durata);
+    }
+
+    // POLIMORFISMO - personalizzo il metodo riproduci()
+    @Override
+    public String riproduci() {
+        return String.format("Stai riproducendo il film %s", this.titolo);
+    }
+
 }

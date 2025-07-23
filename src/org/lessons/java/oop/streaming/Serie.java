@@ -37,5 +37,17 @@ public class Serie extends Contenuto {
     }
 
     // METODI AGGIUNTIVI
+    // POLIMORFISMO - cambio il messaggio del toString in base alla classe!
+    @Override
+    public String toString() {
+        return String.format("Serie TV intitolata ''%s'', con %d attori e %d episodi", this.titolo, this.cast.length,
+                this.episodi.length);
+    }
+
+    // POLIMORFISMO - personalizzo il metodo riproduci()
+    @Override
+    public String riproduci() {
+        return String.format("Stai riproducendo un episodio della serie %s", this.titolo);
+    }
 
 }

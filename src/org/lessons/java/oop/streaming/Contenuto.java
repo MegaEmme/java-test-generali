@@ -1,6 +1,8 @@
 package org.lessons.java.oop.streaming;
 
 //CONCETTO DI EREDITARIETA'  >>>>>>>(IS-A)<<<<<<<
+//CONCETTO DI POLIMORFISMO (ad esempio l'operatore "+", con numeri somma,
+// con stringhe concatena --> è polimorfo!)
 public class Contenuto {
     // ATTRIBUTI
     protected String titolo;
@@ -37,5 +39,10 @@ public class Contenuto {
         //
         // %n --> nuova riga, equivale a "...+ \n +..."
         return String.format("Sto riproducendo: %s", this.titolo);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Contenuto con titolo: ''%s''", this.titolo);
     }
 }
