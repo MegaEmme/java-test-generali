@@ -1,4 +1,4 @@
-package org.lessons.java.oop.generali;
+package org.lessons.java.oop.cars;
 
 public class Auto {
 
@@ -6,18 +6,21 @@ public class Auto {
     private String brand;
     private String model;
     private String color;
-    private int hp;
     private int numberOfDoors;
     private boolean hasStarted;
     private boolean inWorkshop;
-
+    // COMPOSIZIONE (ORIZZONTALE) - qui aggiungo la Classe Motore come Attributo
+    protected Motore motore;
+    //
+    //
     // La classe private nelle variabili di istanza le rende inaccessibili
     // direttamente
     // affidando il compito di recuperare e modificare ai SETTER E GETTER
     // vediamola come una misura di sicurezza per evitare che venga modificato
-    // direttamente il costruttore (ad esempio in setHp c'è la condizione che sia
+    // direttamente il costruttore [ATTENZIONE! >>>>int hp attributo rimosso in
+    // favore dei kw nel Motore<<<< (ad esempio in setHp c'è la condizione che sia
     // "> 0". se modificassi direttamente con cinquecento.hp potrei dare valori
-    // negativi)
+    // negativi)]
     //
     //
     // Modificatori di accesso:
@@ -48,17 +51,18 @@ public class Auto {
     //
     //
     // COSTRUTTORE con parametri
-    public Auto(String brand, String model, String color, int hp, int numberOfDoors) {
+    public Auto(String brand, String model, String color, int numberOfDoors, Motore motore) {
         // tutte le info necessarie ad inizializzare la nostra istanza (il nostro
         // oggetto)
         this.brand = brand; // ATTENZIONE IMPORTANTISSIMO
         this.model = model; // "this.model" è quello a riga 7. "model" invece è quello a riga 16
-        this.color = color; // cosi per tutti i valori ("this" si riferisce agli attributi e l'altro
-        this.hp = hp; // all'argomento del costruttore)
+        this.color = color; // cosi per tutti i valori ("this" si riferisce agli attributi e l'altro //
+                            // all'argomento del costruttore)
         this.numberOfDoors = numberOfDoors;
         this.hasStarted = false; // mentre "hasStarted" e "inWorkshop" (che non sono presenti come parametri
         this.inWorkshop = false; // nel costruttore) le inizializzo direttamente qua dentro
 
+        this.motore = motore;
     }
 
     // METHOD OVERLOADING (OVERLOAD) sul COSTRUTTORE (Vedi OVERLOAD riga 69):
@@ -67,10 +71,10 @@ public class Auto {
         this.brand = "Senza marca";
         this.model = "Modello senza nome";
         this.color = "Modello senza colore";
-        this.hp = 0;
         this.numberOfDoors = 0;
         this.hasStarted = false;
         this.inWorkshop = false;
+        this.motore = new Motore("Motore di test", 10, 1);
     }
 
     // GETTER SETTER
@@ -121,16 +125,6 @@ public class Auto {
         }
     }
 
-    public int getHp() {
-        return this.hp;
-    }
-
-    public void setHp(int hp) {
-        if (hp > 0) {
-            this.hp = hp;
-        }
-    }
-
     public int getNumberOfDoors() {
         return this.numberOfDoors;
     }
@@ -155,6 +149,16 @@ public class Auto {
 
     public void setInWorkshop(boolean inWorkshop) {
         this.inWorkshop = inWorkshop;
+    }
+
+    public Motore getMotore() {
+        return this.motore;
+    }
+
+    public void setMotore(Motore motore) {
+        if (motore != null) {
+            this.motore = motore;
+        }
     }
 
     // capacità tipiche ==> METODI AGGIUNTIVI- quello che può fare
