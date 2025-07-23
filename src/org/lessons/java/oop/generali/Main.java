@@ -1,4 +1,4 @@
-package org.lessons.java.oop.tests.generali;
+package org.lessons.java.oop.generali;
 
 public class Main {
     public static void main(String[] args) {
