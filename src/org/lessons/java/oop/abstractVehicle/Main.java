@@ -1,6 +1,6 @@
 package org.lessons.java.oop.abstractVehicle;
 
-import org.lessons.java.oop.abstractVehicle.interfaces.Truckable;
+// import org.lessons.java.oop.abstractVehicle.interfaces.Truckable;
 
 public class Main {
     public static void main(String[] args) {
