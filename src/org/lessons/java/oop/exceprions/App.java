@@ -1,7 +1,7 @@
 package org.lessons.java.oop.exceprions;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+// import java.io.FileNotFoundException;
+// import java.io.FileReader;
 
 public class App {
     // public static void main(String[] args) {
