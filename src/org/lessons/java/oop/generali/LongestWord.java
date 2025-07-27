@@ -50,13 +50,27 @@ public class LongestWord {
 
         scan.close();
 
-        // A questo punto visualizzo le informazioni sulla sx nella colonna debug e vado
-        // avanti da la, per continuare invece l'esecuzione dopo essersi fermati al
+        // A questo punto visualizzo le informazioni sulla sx nella colonna debug e
+        // nella barra in alto a dx, da cui posso fare:
+        //
+        // STEP INTO:
+        // però clicco su "STEP INTO" vedo cosa succede all'interno del processo che sto
+        // debuggando, cioè entro nel cuore della classe a cui si riferisce
+        // quella linea (in questo caso la class String), da qui premendo il tasto F10
+        // vado avanti e posso scrutare tutto ciò che succede
+        //
+        // CONTINUE:
+        // per continuare invece l'esecuzione dopo essersi fermati al
         // breakpoint dovrò cliccare "CONTINUE" sulla piccola barra di debug che compare
         // in alto (quella col simbolo play verde) cosi facendo o vado al prossimo
-        // breakpoint (se presente) oppure finisco l'esecuzione del programma, se invece
+        // breakpoint (se presente) oppure finisco l'esecuzione del programma.
+        //
+        // STEP OVER:
         // clicco sul tasto "STEP OVER" salto direttamente al prossimo breakpoint (se
         // c'è) senno finisco l'esecuzione.
+        //
+        //
+
         if (parolaUno.length() > parolaDue.length()) {
             System.out.println("Parola uno più lunga");
         } else if (parolaDue.length() > parolaUno.length()) {
